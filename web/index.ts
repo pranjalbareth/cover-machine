@@ -187,7 +187,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
   url.searchParams.append("theme", theme);
   url.searchParams.append("md", mdValue);
   url.searchParams.append("fontSize", fontSize);
-  url.searchParams.append("caption", encodeURIComponent(sub));
+  url.searchParams.append("sub", encodeURIComponent(sub));
   for (let image of images) {
     url.searchParams.append("images", image);
   }
