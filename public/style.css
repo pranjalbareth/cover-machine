@@ -32,6 +32,11 @@ body {
   margin-right: 150px;
   margin-top: 65px;
 }
+
+option {
+  background-color: #111111;
+}
+
 a {
   cursor: pointer;
   color: #10b467;
