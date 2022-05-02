@@ -174,7 +174,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
     theme = "light",
     md = true,
     text = "JavaScript Night !",
-    caption = "by Bhilai Hacks",
+    sub = "April 25, 2022",
     images = [],
     showToast = false,
     messageToast = "",
@@ -187,7 +187,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
   url.searchParams.append("theme", theme);
   url.searchParams.append("md", mdValue);
   url.searchParams.append("fontSize", fontSize);
-  url.searchParams.append("caption", encodeURIComponent(caption));
+  url.searchParams.append("caption", encodeURIComponent(sub));
   for (let image of images) {
     url.searchParams.append("images", image);
   }
@@ -243,12 +243,12 @@ const App = (_: any, state: AppState, setState: SetState) => {
           }),
         }),
         H(Field, {
-          label: "Caption Input",
+          label: "Sub",
           input: H(TextInput, {
-            value: caption,
+            value: sub,
             oninput: (val: string) => {
               console.log("oninput " + val);
-              setLoadingState({ caption: val, overrideUrl: url });
+              setLoadingState({ sub: val, overrideUrl: url });
             },
           }),
         }),

@@ -128,9 +128,8 @@ function getCss(theme: string, fontSize: string) {
       margin: 0;
     }
 
-    .caption {
+    .sub {
       font-size: ${Number(sanitizeHtml(fontSize).match(/\d+/)) * 0.375}px;
-      text-transform: uppercase;
       color: #7a8c97;
       letter-spacing: 0;
     }
@@ -144,7 +143,7 @@ function getCss(theme: string, fontSize: string) {
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-  const { text, theme, md, fontSize, brand, images, caption } = parsedReq;
+  const { text, theme, md, fontSize, brand, images, sub } = parsedReq;
   return `<!DOCTYPE html>
   <html>
   <meta charset="utf-8">
@@ -182,8 +181,8 @@ export function getHtml(parsedReq: ParsedRequest) {
         md ? marked(text) : sanitizeHtml(text)
       )}</div>
       ${
-        caption && caption !== "undefined"
-          ? `<div class="caption">${emojify(sanitizeHtml(caption))}</div>`
+        sub && sub !== "undefined"
+          ? `<div class="sub">${emojify(sanitizeHtml(sub))}</div>`
           : ""
       }
     </div>
