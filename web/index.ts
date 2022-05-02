@@ -171,7 +171,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
   const {
     fileType = "png",
     fontSize = "250px",
-    theme = "light",
+    theme = "dark",
     md = true,
     text = "JavaScript Night !",
     sub = "April 25, 2022",
