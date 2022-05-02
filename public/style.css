@@ -28,6 +28,10 @@ body {
   color: #384046;
 }
 
+#app {
+  margin-right: 150px;
+  margin-top: 65px;
+}
 a {
   cursor: pointer;
   color: #10b467;
