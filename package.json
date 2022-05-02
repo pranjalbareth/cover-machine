@@ -4,7 +4,7 @@
   "private": true,
   "description": "Generate Open Graph images for Bhilai Hacks",
   "engines": {
-    "node": "16.x"
+    "node": "12.x"
   },
   "scripts": {
     "build": "tsc -p api/tsconfig.json && tsc -p web/tsconfig.json"
