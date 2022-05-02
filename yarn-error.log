@@ -28,10 +28,10 @@ Trace:
 
 npm manifest: 
   {
-    "name": "@hackclub/workshop-cards",
+    "name": "bhilai-hacks-cover-machine",
     "version": "1.0.0",
     "private": true,
-    "description": "Generate Open Graph images for Hack Club Workshops",
+    "description": "Generate Open Graph images for Bhilai Hacks",
     "engines": {
       "node": "16.x"
     },

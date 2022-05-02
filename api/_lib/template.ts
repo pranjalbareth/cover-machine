@@ -1,17 +1,17 @@
-import marked from 'marked'
-import { sanitizeHtml } from './sanitizer'
-import { ParsedRequest } from './types'
-const twemoji = require('twemoji')
-const twOptions = { folder: 'svg', ext: '.svg' }
-const emojify = (text: string) => twemoji.parse(text, twOptions)
+import marked from "marked";
+import { sanitizeHtml } from "./sanitizer";
+import { ParsedRequest } from "./types";
+const twemoji = require("twemoji");
+const twOptions = { folder: "svg", ext: ".svg" };
+const emojify = (text: string) => twemoji.parse(text, twOptions);
 
 function getCss(theme: string, fontSize: string) {
-  let background = '#ffffff'
-  let radial = '#dde1e4'
+  let background = "#ffffff";
+  let radial = "#dde1e4";
 
-  if (theme === 'dark') {
-    background = '#17171d'
-    radial = '#273444'
+  if (theme === "dark") {
+    background = "#17171d";
+    radial = "#273444";
   }
 
   return `
@@ -98,7 +98,7 @@ function getCss(theme: string, fontSize: string) {
       position: absolute;
       top: 0;
       width: 100%;
-      color: #ec3750;
+      color: #13810C;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -114,7 +114,7 @@ function getCss(theme: string, fontSize: string) {
     }
 
     .heading {
-      background-image: linear-gradient(to bottom right, #ff8c37, #ec3750 66%);
+      background-image: linear-gradient(to bottom right, #3AC76E, #13810C 66%);
       background-repeat: no-repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -140,11 +140,11 @@ function getCss(theme: string, fontSize: string) {
       width: 1em;
       margin: 0 .05em 0 .1em;
       vertical-align: -0.1em;
-    }`
+    }`;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-  const { text, theme, md, fontSize, brand, images, caption } = parsedReq
+  const { text, theme, md, fontSize, brand, images, caption } = parsedReq;
   return `<!DOCTYPE html>
   <html>
   <meta charset="utf-8">
@@ -155,11 +155,11 @@ export function getHtml(parsedReq: ParsedRequest) {
   </style>
   <body>
     <div class="brand">
-      <img class="logo" src="https://assets.hackclub.com/icon-rounded.svg">
+      <img class="logo" src="https://bhilaihacks.netlify.app/405dce40772b68064041afdb07d9e584.png">
       ${
-        brand.length > 0 && brand !== 'undefined'
-          ? `<span>Hack Club</span> ${brand || 'Workshops'}`
-          : `Hack Club`
+        brand.length > 0 && brand !== "undefined"
+          ? `<span>Bhilai Hacks</span> ${brand || "Workshops"}`
+          : `Bhilai Hacks`
       }
     </div>
     <div class="container">
@@ -167,10 +167,14 @@ export function getHtml(parsedReq: ParsedRequest) {
         images.length > 0
           ? `<div class="img-wrapper">
               <img class="img" src="${sanitizeHtml(images[0])}" />
-              ${images.slice(1).map(img =>
-                `<div class="plus">+</div>
+              ${images
+                .slice(1)
+                .map(
+                  (img) =>
+                    `<div class="plus">+</div>
                 <img class="img" src="${sanitizeHtml(img)}" />`
-              ).join('')}
+                )
+                .join("")}
             </div>`
           : '<div class="spacer"></div>'
       }
@@ -178,11 +182,11 @@ export function getHtml(parsedReq: ParsedRequest) {
         md ? marked(text) : sanitizeHtml(text)
       )}</div>
       ${
-        caption && caption !== 'undefined'
+        caption && caption !== "undefined"
           ? `<div class="caption">${emojify(sanitizeHtml(caption))}</div>`
-          : ''
+          : ""
       }
     </div>
   </body>
-</html>`
+</html>`;
 }
