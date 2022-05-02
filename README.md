@@ -1,4 +1,4 @@
-# Bhilai Hacks Cover Machine
+# <img src="https://bhilaihacks.netlify.app/405dce40772b68064041afdb07d9e584.png" width="22px">  Bhilai Hacks Cover Machine
 
 [![GitHub license](https://img.shields.io/github/license/pranjalbareth/cover-machine.svg?style=flat&logo=github)](https://github.com/pranjalbareth/cover-machine/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/pranjalbareth/cover-machine/pulls) ![Buildi](https://img.shields.io/badge/Build-Passing-brightgreen)
 
