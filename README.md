@@ -1,6 +1,6 @@
 # Bhilai Hacks Cover Machine
 
-[![GitHub license](https://img.shields.io/github/license/pranjalbareth/cover-machine.svg?style=flat&logo=github)](https://github.com/pranjalbareth/cover-machine/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/pranjalbareth/cover-machine/pulls)
+[![GitHub license](https://img.shields.io/github/license/pranjalbareth/cover-machine.svg?style=flat&logo=github)](https://github.com/pranjalbareth/cover-machine/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/pranjalbareth/cover-machine/pulls) ![Buildi](https://img.shields.io/badge/Build-Passing-brightgreen)
 
 **A service that generates dynamic Covers & [Open Graph](https://ogp.me/) images for Bhilai Hacks Hackathon.**
 
