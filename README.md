@@ -10,7 +10,7 @@
 Use the generated image URL in the `<head>` of your HTML document as the og:image meta property
 
 ```html
-  <meta property="og:image" content="https://og.railway.app/api/image?fileType=png&layoutName=Simple&Text=**Hello**+_World_" />
+  <meta property="og:image" content="https://cover-machine.vercel.app/api/image?fileType=png&layoutName=Simple&Text=**Hello**+_World_" />
 ```
 
 Whenever this image is requested (e.g. in link previews) the image will be generated on demand.
